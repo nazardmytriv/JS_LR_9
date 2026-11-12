@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Promise</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 12px; }
+    h1 { font-size: 22px; }
+    .task { margin: 12px 0; }
+    input[type=button] { padding: 6px 12px; cursor: pointer; }
+    input[type=number] { width: 80px; padding: 4px; }
+    #result { margin-top: 12px; min-height: 20px; font-weight: bold; }
+    #result.error { color: #c62828; }
+
+    /* лоадер (Завдання 0) */
+    #loader {
+      display: none;
+      width: 30px; height: 30px; margin-top: 12px;
+      border: 4px solid #ccc; border-top-color: #333;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <h1>Використання JavaScript Promise</h1>
+
+  <div class="task">
+    <strong>Завдання 1.</strong>
+    <input type="button" id="task1" value="Hello, World! (2 с)">
+  </div>
+
+  <div class="task">
+    <strong>Завдання 2.</strong>
+    <input type="number" id="num">
+    <input type="button" id="task2" value="Перевірити число">
+  </div>
+
+  <div class="task">
+    <strong>Завдання 3.</strong>
+    <input type="button" id="task3" value="Випадкове число">
+  </div>
+
+  <div class="task">
+    <strong>Завдання 4.</strong>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="button" id="task4" value="Порівняти числа">
+  </div>
+
+  <div class="task">
+    <strong>Завдання 5.</strong>
+    <input type="button" id="task5" value="Promise.all (сума)">
+  </div>
+
+  <div id="loader"></div>
+  <div id="result"></div>
+
+  <script src="promise.js"></script>
+</body>
+</html>
